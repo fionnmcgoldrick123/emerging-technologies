@@ -98,9 +98,11 @@ Creates quantum oracles for all four single-input Boolean functions (f₀, f₁,
 
 ### Problem 4: Deutsch's Algorithm with Qiskit
 
+Implements Deutsch's algorithm, which solves the constant vs. balanced problem for single-input functions with just one oracle query—a 50% reduction from the classical requirement of two queries. The quantum circuit uses superposition and quantum interference to extract global properties of the function. By preparing the output qubit in the |−⟩ state and the input qubit in the |+⟩ state, the algorithm exploits phase kickback to encode the function's type in the final measurement outcome.
 
 ### Problem 5: Scaling to the Deutsch–Jozsa Algorithm
 
+Extends Deutsch's algorithm to handle multi-input functions, specifically the 4-input Boolean functions from Problem 1. The Deutsch-Jozsa algorithm maintains the single-query advantage even as the input size grows, representing an exponential speedup over classical approaches (1 query vs. 9 queries for 4 inputs). The implementation demonstrates how oracles for complex Boolean functions are constructed and how the quantum Fourier transform-like interference pattern enables efficient function classification on quantum hardware.
 
 ## Results
 
