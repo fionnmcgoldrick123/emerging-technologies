@@ -10,6 +10,14 @@ The notebook progresses through five interconnected problems that build understa
 
 ## Repository Contents
 
+- **[problems.ipynb](problems.ipynb)**: The main Jupyter notebook containing all five problems exploring classical and quantum algorithms, with detailed implementations, explanations, tests, and analysis. This notebook progresses from classical Boolean function generation through the implementation of Deutsch's and Deutsch-Jozsa algorithms.
+
+- **[README.md](README.md)**: This file, provides an overview of the project, setup instructions, solution summaries, and references.
+
+- **[requirements.txt](requirements.txt)**: Lists all Python package dependencies required to run the notebook, including Qiskit, Jupyter, NumPy, and Matplotlib.
+
+- **[.gitignore](.gitignore)**: Specifies which files and directories Git should ignore (e.g., virtual environments, Python cache files).
+
 ## Repository Structure 
 
 ## Setup
