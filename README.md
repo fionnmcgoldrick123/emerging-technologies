@@ -8,6 +8,16 @@ The notebook progresses through five interconnected problems that build understa
 
 ## Assessment Brief
 
+This repository was created as part of the Emerging Technologies module assessment for Summer 2025/26. The primary objective is to demonstrate understanding of both classical and quantum computing concepts through the completion of five interconnected problems presented in the [problems.ipynb](problems.ipynb) notebook.
+
+**Project Scope**: The assessment requires implementing and analyzing algorithms that determine properties of Boolean functions, progressing from classical algorithmic approaches to quantum computing solutions. This includes developing random function generators, classical testing algorithms, quantum oracles, and implementations of both Deutsch's and Deutsch-Jozsa algorithms.
+
+**Development Approach**: This project has been developed incrementally with regular commits throughout the semester, ensuring proper version control practices and demonstrating consistent progress. All code is designed to be reproducible and executable by computing professionals familiar with Python and Jupyter notebooks, with comprehensive setup instructions provided below.
+
+**Target Audience**: This repository is intended for informed computing professionals, such as potential employers or academic reviewers, who have a strong foundation in computer science but may not be specialists in quantum computing. All necessary dependencies, setup procedures, and theoretical background are documented to enable seamless reproduction of results.
+
+
+
 ## Repository Contents
 
 - **[problems.ipynb](problems.ipynb)**: The main Jupyter notebook containing all five problems exploring classical and quantum algorithms, with detailed implementations, explanations, tests, and analysis. This notebook progresses from classical Boolean function generation through the implementation of Deutsch's and Deutsch-Jozsa algorithms.
@@ -18,7 +28,20 @@ The notebook progresses through five interconnected problems that build understa
 
 - **[.gitignore](.gitignore)**: Specifies which files and directories Git should ignore (e.g., virtual environments, Python cache files).
 
-## Repository Structure 
+## Repository Structure
+
+The repository follows a simple, flat structure for ease of navigation:
+
+```
+emerging-technologies/
+├── problems.ipynb          # Main Jupyter notebook with all five problems
+├── README.md               # Project overview and documentation
+├── requirements.txt        # Python package dependencies
+├── .gitignore             # Git ignore rules
+└── .venv/                 # Virtual environment (not tracked in Git)
+```
+
+This minimal structure ensures all essential files are easily accessible from the repository root, following best practices for academic and professional Python projects. 
 
 ## Setup
 
@@ -100,6 +123,18 @@ Implements `random_constant_balanced()`, a Python function that generates random
 
 Develops `determine_constant_balanced()`, a classical algorithm that determines whether a given Boolean function is constant or balanced. The analysis proves that classical computers require up to 2^(n-1) + 1 queries in the worst case (9 queries for 4-input functions) to be 100% certain of the function type. This establishes the classical baseline that quantum algorithms aim to improve upon, demonstrating the fundamental limitations of classical query complexity.
 
+
+All implementations have been tested and verified using Qiskit's quantum simulators. Key findings include:
+
+- **Classical Baseline**: For 4-input Boolean functions, classical algorithms require up to 9 queries (2^(n-1) + 1) to deterministically classify functions as constant or balanced.
+
+- **Quantum Advantage**: Both Deutsch's algorithm and the Deutsch-Jozsa algorithm achieve 100% accuracy with only a single oracle query, demonstrating provable quantum computational advantage.
+
+- **Scalability**: While the classical query complexity grows exponentially with input size, the quantum approach maintains constant (single) query complexity, showcasing one of quantum computing's fundamental strengths.
+
+- **Circuit Verification**: All quantum oracles and algorithms have been validated through comprehensive testing, with circuit diagrams and measurement statistics included in the notebook.
+
+Detailed results, including quantum circuit visualizations, measurement histograms, and complexity analyses, are available in [problems.ipynb](problems.ipynb).
 ### Problem 3: Quantum Oracles
 
 Creates quantum oracles for all four single-input Boolean functions (f₀, f₁, f₂, f₃) using Qiskit. Each oracle implements the reversible transformation |x⟩|y⟩ → |x⟩|y ⊕ f(x)⟩ using quantum gates (X, CNOT). The implementation demonstrates key quantum computing principles including reversibility, the XOR trick for preserving quantum information, and how classical functions are encoded as unitary quantum operations. All oracles are verified through comprehensive testing on quantum simulators.
