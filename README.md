@@ -151,5 +151,77 @@ Extends Deutsch's algorithm to handle multi-input functions, specifically the 4-
 
 ## References
 
+- [Rapid Solution of Problems by Quantum Computation - Deutsch & Jozsa (1992)](https://doi.org/10.1098/rspa.1992.0167) - *Original Deutsch-Jozsa algorithm paper defining constant vs balanced classification.*
+
+- [Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer - Deutsch (1985)](https://doi.org/10.1098/rspa.1985.0070) - *Foundational paper proposing quantum computation and the single-bit problem.*
+
+- [Quantum Computing Since Democritus - Aaronson (2013)](https://www.cambridge.org/core/books/quantum-computing-since-democritus/F77C0E5B2E37A0B05BDE0835E582E41E) - *Discusses query complexity and oracle separations for Deutsch-Jozsa.*
+
+- [Quantum Complexity Theory - Bernstein & Vazirani (1997)](https://doi.org/10.1137/S0097539796300921) - *Extends Deutsch-Jozsa to prove broader quantum-classical separations.*
+
+- [Quantum Computing in the NISQ Era and Beyond - Preskill (2018)](https://doi.org/10.22331/q-2018-08-06-79) - *Contextualizes idealized algorithmic advantages against practical hardware constraints.*
+
+- [The Art of Computer Programming, Volume 2 - Knuth (1997)](https://www-cs-faculty.stanford.edu/~knuth/taocp.html) - *Covers pseudorandom number generation used in Python's `random` module.*
+
+- [Models of Computation - Savage (1998)](https://doi.org/10.1007/978-1-4612-0575-8) - *Discusses exponential blowup in truth table representations of Boolean functions.*
+
+- [Structure and Interpretation of Computer Programs - Abelson & Sussman (1996)](https://mitpress.mit.edu/9780262510875/) - *Functions as first-class objects, relevant to our callable function design.*
+
+- [Discrete Mathematics and Its Applications - Rosen (2019)](https://www.mheducation.com/highered/product/discrete-mathematics-applications-rosen/M9781259676512.html) - *Boolean algebra foundations and combinatorial basis for balanced function counting.*
+
+- [Quantum Computing for the Very Curious - Matuschak & Nielsen (2019)](https://quantum.country/qcvc) - *Interactive essay on quantum superposition and interference.*
+
+- [Quantum Algorithm Implementations for Beginners - Coles et al. (2022)](https://doi.org/10.1145/3517340) - *Practical Deutsch-Jozsa implementation with code examples. [arXiv:1804.03719](https://arxiv.org/abs/1804.03719).*
+
+- [Python random Module Documentation](https://docs.python.org/3/library/random.html) - *Reference for `random.sample()` used in balanced function generation.*
+
+- [Python itertools.product() Documentation](https://docs.python.org/3/library/itertools.html#itertools.product) - *Reference for generating Cartesian products of input iterables.*
+
+- [Python secrets Module Documentation](https://docs.python.org/3/library/secrets.html) - *Cryptographically secure alternative to `random` for formal analysis.*
+
+- [Quantum Algorithms Revisited - Cleve, Ekert, Macchiavello & Mosca (1998)](https://doi.org/10.1098/rspa.1998.0164) - *Clearest explanation of why classical computation requires exponentially many queries. [arXiv:quant-ph/9708016](https://arxiv.org/abs/quant-ph/9708016).*
+
+- [Quantum Computation and Quantum Information - Nielsen & Chuang (2010)](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6802309D06B22D27D) - *Complete proof of the 2^(n-1) + 1 classical query requirement.*
+
+- [Quantum Lower Bounds by Polynomials - Beals, Buhrman, Cleve, Mosca & de Wolf (2001)](https://doi.org/10.1145/502090.502097) - *Formal framework establishing tight query bounds for Deutsch-Jozsa.*
+
+- [Quantum Algorithms: An Overview - Montanaro (2016)](https://doi.org/10.1038/npjqi.2015.23) - *Survey categorizing quantum algorithms by speedup type.*
+
+- [Quantum Computing Lecture Notes - de Wolf (2019)](https://homepages.cwi.nl/~rdewolf/qcnotes.pdf) - *Proves the classical query complexity lower bound from information theory.*
+
+- [Computational Complexity: A Modern Approach - Arora & Barak (2009)](https://theory.cs.princeton.edu/complexity/) - *Covers query complexity and oracle models formally.*
+
+- [Introduction to the Theory of Computation - Sipser (2012)](https://mitpress.mit.edu/9780262018302/) - *Oracle Turing machines and relativized computation foundations.*
+
+- [Introduction to Algorithms - Cormen, Leiserson, Rivest & Stein (2022)](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) - *Early termination optimization and computational complexity.*
+
+- [Quantum Supremacy Using a Programmable Superconducting Processor - Arute et al. (2019)](https://doi.org/10.1038/s41586-019-1666-5) - *Practical demonstration of the classical-quantum gap.*
+
+- [Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer - Shor (1997)](https://doi.org/10.1137/S0097539795293172) - *Builds on the oracle template established by Deutsch-Jozsa.*
+
+- [A Fast Quantum Mechanical Algorithm for Database Search - Grover (1996)](https://doi.org/10.1145/237814.237866) - *Oracle-based quantum speedup achieving quadratic advantage for search.*
+
+- [Python Sets - Real Python](https://realpython.com/python-sets/) - *Reference for tracking distinct output values during classification.*
+
+- [Elementary Gates for Quantum Computation - Barenco et al. (1995)](https://doi.org/10.1103/PhysRevA.52.3457) - *Proves any quantum computation decomposes into single-qubit and CNOT gates.*
+
+- [Logical Reversibility of Computation - Bennett (1973)](https://doi.org/10.1147/rd.176.0525) - *Proves irreversible computation can be embedded in reversible computation, foundational for oracle design.*
+
+- [Reversible Computing - Toffoli (1980)](https://doi.org/10.1007/3-540-10003-2_104) - *Introduces the Toffoli gate and formalizes reversible computation underpinning quantum oracles.*
+
+- [An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation - Gottesman (2010)](https://arxiv.org/abs/0904.2557) - *Error correction techniques for running oracle circuits on noisy hardware.*
+
+- [Synthesis of Quantum Logic Circuits - Shende, Markov & Bullock (2006)](https://doi.org/10.1109/TCAD.2005.855930) - *Tight lower bounds on CNOT gates validating our oracle gate counts.*
+
+- [The Computational Complexity of Linear Optics - Aaronson & Arkhipov (2011)](https://doi.org/10.1145/1993636.1993682) - *Classical intractability of simulating quantum systems.*
+
+- [Universality in Quantum Computation - Deutsch, Barenco & Ekert (1995)](https://doi.org/10.1098/rspa.1995.0065) - *Almost every two-qubit gate is universal, connecting to CNOT-based oracle construction.*
+
+- [Qiskit QuantumCircuit API Documentation](https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit) - *Official reference for building quantum circuits in Qiskit.*
+
+- [Qiskit Aer Simulator Documentation](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html) - *Reference for verifying oracle correctness via simulation.*
+
+
+
 ## Author
 *This notebook was written and designed by Fionn McGoldrick*
