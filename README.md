@@ -221,7 +221,79 @@ Extends Deutsch's algorithm to handle multi-input functions, specifically the 4-
 
 - [Qiskit Aer Simulator Documentation](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html) - *Reference for verifying oracle correctness via simulation.*
 
+## AI Usage Declaration
 
+Artificial intelligence tools were used in a limited and supportive capacity during the preparation of this work. 
+
+[ChatGPT](https://chatgpt.com/) was occasionally used to assist with improving clarity of expression, correcting grammar, and refining written English. All ideas, analysis, structure, and final content remain my own.
+
+**ChatGPT Example Prompt**
+
+**Me:**
+
+*Before we can really appreciate what makes the Deutsch Jozsa algorithm so remarkable, we first needs to understand what kind of problem it is actually solving.*
+
+*At the centre of it is the Boolean function, which is a mathematical function that take one or more True or False inputs and return a single True or False output. These kind of functions are the building blocks for digital logic and computer circuits. A simple one input Boolean function might always return True no matter what you give it, or it might flip its input and returns False when given True and vice versa.*
+
+**ChatGPT:**
+
+*Before we can appreciate what makes the Deutsch-Jozsa algorithm remarkable, we need to understand the kind of problem it's actually solving.*
+
+*At the heart of it all is the [Boolean function](https://en.wikipedia.org/wiki/Boolean_function), a mathematical function that takes one or more ``True``/``False`` inputs and returns a single ``True``/``False`` output. These functions are the building blocks of digital logic and computer circuits. A simple one-input Boolean function might always return ``True`` no matter what you give it, or it might flip its input, returning ``False`` when given `````True````` and vice versa:*
+
+[Claude](https://claude.ai/new) was consulted in specific instances to help troubleshoot Python related issues when alternative sources such as documentation or online forums did not resolve the problem. Any code produced was carefully reviewed, understood, and adapted where necessary before inclusion. Claude was also used for extra explanation for Python concepts when needed.
+
+Claude was also used in the assistance of creating test cases for problem implementations in the notebook. 
+
+**Claude Example Prompt**
+
+**Me:**
+
+*I understand this function generates either a constant or balanced Boolean function using a lookup table.*
+
+*Can you explain why using a dictionary for the lookup table guarantees that the function is truly balanced when eight inputs are selected?*
+
+**Claude**
+
+*Using a dictionary as a lookup table guarantees correctness because every possible input combination is explicitly mapped to exactly one output value.*
+
+*In your implementation, you first generate all 16 possible input combinations using:*
+
+```python
+all_inputs = list(itertools.product([False, True], repeat=4))
+```
+
+*This ensures that every possible 4 bit Boolean input exists exactly once in the list.*
+
+*For the balanced case, you then randomly select exactly 8 of those 16 input combinations:*
+
+```python
+true_inputs = set(random.sample(all_inputs, 8))
+```
+
+*Since random.sample selects without replacement, it guarantees that:*
+
+*Exactly 8 unique inputs are chosen*
+
+*No duplicates can occur*
+
+*Then you construct the lookup table by assigning:*
+
+```python
+lookup_table[input_combo] = input_combo in true_inputs
+```
+
+**This means:**
+
+*The 8 selected inputs map to True*
+
+*The remaining 8 inputs map to False*
+
+*Because the dictionary contains all 16 possible inputs and exactly 8 are assigned True, the function is mathematically guaranteed to be balanced.*
+
+*The dictionary enforces determinism as well. Once created, every identical input tuple will always return the same output value, which ensures the function behaves consistently like a proper Boolean function.*
+
+While artificial intelligence was used as a helpful tool in the production of my notebook, all work remains reflects my own understanding, research, and ideas.
 
 ## Author
 *This notebook was written and designed by Fionn McGoldrick*
