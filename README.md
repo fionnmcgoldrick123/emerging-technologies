@@ -17,6 +17,8 @@ This repository was created as part of the Emerging Technologies module assessme
 **Target Audience**: This repository is intended for informed computing professionals, such as potential employers or academic reviewers, who have a strong foundation in computer science but may not be specialists in quantum computing. All necessary dependencies, setup procedures, and theoretical background are documented to enable seamless reproduction of results.
 
 
+**Compliance Statement**: All work in this repository has been completed in accordance with the rules and requirements outlined in the [computational-theory GitHub repository](https://github.com/ianmcloughlin/computational-theory) for the Emerging Technologies module in my final year of college.
+
 
 ## Repository Contents
 
@@ -223,9 +225,15 @@ Extends Deutsch's algorithm to handle multi-input functions, specifically the 4-
 
 ## AI Usage Declaration
 
-Artificial intelligence tools were used in a limited and supportive capacity during the preparation of this work. 
+
+Artificial intelligence tools were used in a limited and supportive capacity during the preparation of this work. The following model types were used:
+
+- **ChatGPT (OpenAI GPT-4)**: Used for improving clarity of expression, correcting grammar, and refining written English.
+- **Claude (Anthropic Claude 2/3)**: Used for troubleshooting Python issues, providing extra explanation, and assisting with test case creation.
 
 [ChatGPT](https://chatgpt.com/) was occasionally used to assist with improving clarity of expression, correcting grammar, and refining written English. All ideas, analysis, structure, and final content remain my own.
+
+All ideas, analysis, structure, and final content remain my own.
 
 **ChatGPT Example Prompt**
 
