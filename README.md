@@ -175,6 +175,30 @@ The 5-qubit circuit correctly classified both constant functions and two structu
 
 The five problems together form a complete arc from classical baseline to quantum advantage. Classical algorithms are limited by the 2^(n-1) + 1 query bound; Deutsch–Jozsa achieves the same certainty in exactly one oracle call at any scale. All implementations were verified on Qiskit's AerSimulator with no failures across any test case. Full circuit diagrams, measurement histograms, and complexity analysis are available in [problems.ipynb](problems.ipynb).
 
+### Problem 1: Random Boolean Function Generator
+
+The `random_constant_balanced()` function was validated across 100 randomly generated functions. Every function was correctly identified as either constant or balanced using exhaustive truth-table testing, with no failures. The distribution of constant vs. balanced functions was approximately equal as expected from the random selection, confirming the generator behaves correctly as a foundation for the problems that follow.
+
+### Problem 2: Classical Determination Algorithm
+
+The `determine_constant_balanced()` function achieved 100% classification accuracy across all tested functions. The analysis confirmed the theoretical worst-case of 9 queries (2^(n-1) + 1) for 4-input constant functions, while balanced functions terminated early — often within 2–3 queries — as soon as conflicting outputs were found. This established the classical baseline: provably impossible to do better without quantum methods.
+
+### Problem 3: Quantum Oracles
+
+All four single-input oracles (f₀–f₃) correctly implemented the reversible transformation |x⟩|y⟩ → |x⟩|y ⊕ f(x)⟩ and passed every test case on the AerSimulator. The double-application test verified reversibility for all four oracles. Constant oracle f₀ required no gates at all, while balanced oracle f₂ required three, illustrating how gate complexity varies even within the same function class.
+
+### Problem 4: Deutsch's Algorithm
+
+The algorithm correctly classified all four oracles using a single oracle query across 1024 simulation shots with zero errors. Constant functions (f₀, f₃) consistently measured `0`, and balanced functions (f₁, f₂) consistently measured `1`, exactly matching theoretical predictions. The result was deterministic — not probabilistic — confirming that quantum interference fully resolves the classification without any guesswork.
+
+### Problem 5: Deutsch–Jozsa Algorithm
+
+The 5-qubit circuit correctly classified both constant functions and two structurally different balanced functions (first-half and alternating) using a single oracle call in each case. For both constant functions, all 1024 shots collapsed to `0000`. For both balanced functions, `0000` was entirely absent from the results. The classification was unambiguous in every test, demonstrating the exponential query advantage — 1 query versus the 9 required classically — holds regardless of how the balanced function distributes its outputs.
+
+### Overall
+
+The five problems together form a complete arc from classical baseline to quantum advantage. Classical algorithms are limited by the 2^(n-1) + 1 query bound; Deutsch–Jozsa achieves the same certainty in exactly one oracle call at any scale. All implementations were verified on Qiskit's AerSimulator with no failures across any test case. Full circuit diagrams, measurement histograms, and complexity analysis are available in [problems.ipynb](problems.ipynb).
+
 ## References
 
 - [Rapid Solution of Problems by Quantum Computation - Deutsch & Jozsa (1992)](https://doi.org/10.1098/rspa.1992.0167) - *Original Deutsch-Jozsa algorithm paper defining constant vs balanced classification.*
