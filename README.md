@@ -1,203 +1,92 @@
-# Emerging Technologies Assessment Classical and Quantum Algorithms
+# Emerging Technologies: Classical and Quantum Algorithms
 
 ## Overview
 
-This repository contains a comprehensive exploration of classical and quantum algorithms, focusing on the [Deutsch-Jozsa algorithm](https://quantum.cloud.ibm.com/learning/en/modules/computer-science/deutsch-jozsa) and its predecessor, [Deutsch's algorithm](https://quantum.cloud.ibm.com/learning/en/courses/fundamentals-of-quantum-algorithms/quantum-query-algorithms/deutsch-algorithm). The [problems.ipynb](problems.ipynb) notebook demonstrates the fundamental differences between classical and quantum approaches to determining whether [Boolean functions](https://en.wikipedia.org/wiki/Boolean_function) are constant or balanced, showcasing one of the earliest proven quantum computational advantages.
+This repository contains the assessment submission for the Emerging Technologies module (Summer 2025/26) at ATU. The work explores the distinction between classical and quantum approaches to a well-defined computational problem: determining whether a Boolean function is constant or balanced.
 
-The notebook progresses through five interconnected problems that build understanding from classical function generation to full quantum algorithm implementation. Beginning with Python-based classical solutions, it transitions to quantum circuit design using [Qiskit](https://www.ibm.com/quantum/qiskit), ultimately demonstrating how quantum computers can solve certain problems exponentially faster than their classical counterparts. Each problem includes detailed theoretical background, implementation code, comprehensive testing, and analysis of efficiency and limitations.
-
-## Assessment Brief
-
-This repository was created as part of the Emerging Technologies module assessment for Summer 2025/26. The primary objective is to demonstrate understanding of both classical and quantum computing concepts through the completion of five interconnected problems presented in the [problems.ipynb](problems.ipynb) notebook.
-
-**Project Scope**: The assessment requires implementing and analyzing algorithms that determine properties of Boolean functions, progressing from classical algorithmic approaches to quantum computing solutions. This includes developing random function generators, classical testing algorithms, quantum oracles, and implementations of both Deutsch's and Deutsch-Jozsa algorithms.
-
-**Development Approach**: This project has been developed incrementally with regular commits throughout the semester, ensuring proper version control practices and demonstrating consistent progress. All code is designed to be reproducible and executable by computing professionals familiar with Python and Jupyter notebooks, with comprehensive setup instructions provided below.
-
-**Target Audience**: This repository is intended for informed computing professionals, such as potential employers or academic reviewers, who have a strong foundation in computer science but may not be specialists in quantum computing. All necessary dependencies, setup procedures, and theoretical background are documented to enable seamless reproduction of results.
-
-
-**Compliance Statement**: All work in this repository has been completed in accordance with the rules and requirements outlined in the [computational-theory GitHub repository](https://github.com/ianmcloughlin/computational-theory) for the Emerging Technologies module in my final year of college.
-
-
-## Repository Contents
-
-- **[problems.ipynb](problems.ipynb)**: The main Jupyter notebook containing all five problems exploring classical and quantum algorithms, with detailed implementations, explanations, tests, and analysis. This notebook progresses from classical Boolean function generation through the implementation of Deutsch's and Deutsch-Jozsa algorithms.
-
-- **[README.md](README.md)**: This file, provides an overview of the project, setup instructions, solution summaries, and references.
-
-- **[requirements.txt](requirements.txt)**: Lists all Python package dependencies required to run the notebook, including Qiskit, Jupyter, NumPy, and Matplotlib.
-
-- **[.gitignore](.gitignore)**: Specifies which files and directories Git should ignore (e.g., virtual environments, Python cache files).
+The [problems.ipynb](problems.ipynb) notebook works through five interconnected problems, progressing from classical Python implementations to full quantum circuit design using [Qiskit](https://www.ibm.com/quantum/qiskit). The central focus is the [Deutsch-Jozsa algorithm](https://quantum.cloud.ibm.com/learning/en/modules/computer-science/deutsch-jozsa), one of the earliest demonstrations of a provable quantum computational advantage over classical methods.
 
 ## Repository Structure
 
-The repository follows a simple, flat structure for ease of navigation:
-
 ```
 emerging-technologies/
-├── problems.ipynb          # Main Jupyter notebook with all five problems
-├── README.md               # Project overview and documentation
-├── requirements.txt        # Python package dependencies
-├── .gitignore             # Git ignore rules
-└── .venv/                 # Virtual environment (not tracked in Git)
+├── problems.ipynb      # Main notebook containing all five problems
+├── README.md           # This file
+├── requirements.txt    # Python package dependencies
+└── .gitignore          # Git ignore rules
 ```
 
-This minimal structure ensures all essential files are easily accessible from the repository root, following best practices for academic and professional Python projects. 
+## Problems
+
+The notebook addresses the following five problems in sequence:
+
+**Problem 1: Generating Random Boolean Functions**
+Implements `random_constant_balanced()`, a function that randomly generates either a constant or balanced Boolean function over four inputs. Constant functions return the same value for all 16 input combinations; balanced functions return `True` for exactly 8 of them.
+
+**Problem 2: Classical Testing for Function Type**
+Implements `determine_constant_balanced()`, a classical algorithm that classifies a given function as constant or balanced. The analysis establishes the worst-case query complexity of 2^(n-1) + 1 calls (9 for four-input functions), forming the classical baseline against which the quantum algorithms are compared.
+
+**Problem 3: Quantum Oracles**
+Constructs quantum oracles for all four single-input Boolean functions using Qiskit. Each oracle encodes the function as a reversible unitary transformation of the form |x⟩|y⟩ → |x⟩|y ⊕ f(x)⟩, and is verified on Qiskit's AerSimulator.
+
+**Problem 4: Deutsch's Algorithm**
+Implements Deutsch's algorithm for single-input functions. The circuit uses superposition and phase kickback to classify the function as constant or balanced using a single oracle query, compared to the two queries required classically.
+
+**Problem 5: Deutsch-Jozsa Algorithm**
+Extends the approach to four-input functions from Problem 1. The Deutsch-Jozsa algorithm classifies any such function using a single oracle query, regardless of input size, demonstrating an exponential improvement over the classical worst case.
 
 ## Setup
 
-This section explains how to set up your computer to run the notebook.
+### Prerequisites
 
-### Requirements
-
-You need the following installed on your computer:
-
-- **Python 3.8 or newer**: The programming language used in this project
-- **pip**: Python's package installer (comes with Python)
-- **Git** (optional): To download this repository
+- Python 3.8 or newer
+- pip
 
 ### Installation
 
-Follow these steps to get everything working:
+Clone the repository and install dependencies:
 
-1. **Download the repository**: If you have Git, open a terminal and run:
-   ```bash
-   git clone https://github.com/fionnmcgoldrick123/emerging-technologies.git
-   cd emerging-technologies
-   ```
-   Or download the ZIP file from GitHub and extract it.
+```bash
+git clone https://github.com/fionnmcgoldrick123/emerging-technologies.git
+cd emerging-technologies
+python -m venv .venv
+```
 
-2. **Create a virtual environment** (recommended): This keeps the project's packages separate from your other Python projects:
-   ```bash
-   python -m venv .venv
-   ```
+Activate the virtual environment:
 
-3. **Activate the virtual environment**:
-   - On Windows:
-     ```bash
-     .venv\Scripts\activate
-     ```
-   - On Mac/Linux:
-     ```bash
-     source .venv/bin/activate
-     ```
+```bash
+# Windows
+.venv\Scripts\activate
 
-4. **Install the required packages**: This installs all the libraries needed for the notebook:
-   ```bash
-   pip install -r requirements.txt
-   ```
+# macOS / Linux
+source .venv/bin/activate
+```
 
-The main packages you'll be using include:
-- **Jupyter**: For running notebook files
-- **Qiskit**: IBM's quantum computing framework
-- **NumPy**: For working with numbers and arrays
-- **Matplotlib**: For creating charts and visualizations
+Install the required packages:
 
-### Running The Notebook
+```bash
+pip install -r requirements.txt
+```
 
-Once everything is installed, you can open and run the notebook:
+### Running the Notebook
 
-1. Make sure your virtual environment is activated (see step 3 above)
+```bash
+jupyter lab
+```
 
-2. Start Jupyter Lab:
-   ```bash
-   jupyter lab
-   ```
-   Or if you prefer Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
+Open [problems.ipynb](problems.ipynb) in the browser and run all cells in order using `Shift + Enter` or the Run All option. The notebook should execute from top to bottom without errors.
 
-3. Your web browser will open automatically. Click on [problems.ipynb](problems.ipynb) to open the notebook.
-
-4. Run the code cells by clicking on them and pressing `Shift + Enter`, or use the "Run" button at the top.
-
-**Note**: The notebook uses Python's built-in libraries like `random`, `itertools`, and `typing` for the classical algorithm problems, then transitions to Qiskit for the quantum computing portions.
-
-## Solution Summary
-
-### Problem 1: Generating Random Boolean Functions
-
-Implements `random_constant_balanced()`, a Python function that generates random constant or balanced Boolean functions with four inputs. Constant functions always return the same value (True or False), while balanced functions return True for exactly half (8 of 16) of the possible input combinations. The implementation uses dictionary-based lookup tables and Python's itertools to efficiently generate all 16 possible input combinations, providing the foundation for testing both classical and quantum algorithms.
-
-### Problem 2: Classical Testing for Function Type
-
-Develops `determine_constant_balanced()`, a classical algorithm that determines whether a given Boolean function is constant or balanced. The analysis proves that classical computers require up to 2^(n-1) + 1 queries in the worst case (9 queries for 4-input functions) to be 100% certain of the function type. This establishes the classical baseline that quantum algorithms aim to improve upon, demonstrating the fundamental limitations of classical query complexity.
-
-
-All implementations have been tested and verified using Qiskit's quantum simulators. Key findings include:
-
-- **Classical Baseline**: For 4-input Boolean functions, classical algorithms require up to 9 queries (2^(n-1) + 1) to deterministically classify functions as constant or balanced.
-
-- **Quantum Advantage**: Both Deutsch's algorithm and the Deutsch-Jozsa algorithm achieve 100% accuracy with only a single oracle query, demonstrating provable quantum computational advantage.
-
-- **Scalability**: While the classical query complexity grows exponentially with input size, the quantum approach maintains constant (single) query complexity, showcasing one of quantum computing's fundamental strengths.
-
-- **Circuit Verification**: All quantum oracles and algorithms have been validated through comprehensive testing, with circuit diagrams and measurement statistics included in the notebook.
-
-Detailed results, including quantum circuit visualizations, measurement histograms, and complexity analyses, are available in [problems.ipynb](problems.ipynb).
-### Problem 3: Quantum Oracles
-
-Creates quantum oracles for all four single-input Boolean functions (f₀, f₁, f₂, f₃) using Qiskit. Each oracle implements the reversible transformation |x⟩|y⟩ → |x⟩|y ⊕ f(x)⟩ using quantum gates (X, CNOT). The implementation demonstrates key quantum computing principles including reversibility, the XOR trick for preserving quantum information, and how classical functions are encoded as unitary quantum operations. All oracles are verified through comprehensive testing on quantum simulators.
-
-### Problem 4: Deutsch's Algorithm with Qiskit
-
-Implements Deutsch's algorithm, which solves the constant vs. balanced problem for single-input functions with just one oracle query—a 50% reduction from the classical requirement of two queries. The quantum circuit uses superposition and quantum interference to extract global properties of the function. By preparing the output qubit in the |−⟩ state and the input qubit in the |+⟩ state, the algorithm exploits phase kickback to encode the function's type in the final measurement outcome.
-
-### Problem 5: Scaling to the Deutsch–Jozsa Algorithm
-
-Extends Deutsch's algorithm to handle multi-input functions, specifically the 4-input Boolean functions from Problem 1. The Deutsch-Jozsa algorithm maintains the single-query advantage even as the input size grows, representing an exponential speedup over classical approaches (1 query vs. 9 queries for 4 inputs). The implementation demonstrates how oracles for complex Boolean functions are constructed and how the quantum Fourier transform-like interference pattern enables efficient function classification on quantum hardware.
-
-## Results
-
-### Problem 1: Random Boolean Function Generator
-
-The `random_constant_balanced()` function was validated across 100 randomly generated functions. Every function was correctly identified as either constant or balanced using exhaustive truth-table testing, with no failures. The distribution of constant vs. balanced functions was approximately equal as expected from the random selection, confirming the generator behaves correctly as a foundation for the problems that follow.
-
-### Problem 2: Classical Determination Algorithm
-
-The `determine_constant_balanced()` function achieved 100% classification accuracy across all tested functions. The analysis confirmed the theoretical worst-case of 9 queries (2^(n-1) + 1) for 4-input constant functions, while balanced functions terminated early — often within 2–3 queries — as soon as conflicting outputs were found. This established the classical baseline: provably impossible to do better without quantum methods.
-
-### Problem 3: Quantum Oracles
-
-All four single-input oracles (f₀–f₃) correctly implemented the reversible transformation |x⟩|y⟩ → |x⟩|y ⊕ f(x)⟩ and passed every test case on the AerSimulator. The double-application test verified reversibility for all four oracles. Constant oracle f₀ required no gates at all, while balanced oracle f₂ required three, illustrating how gate complexity varies even within the same function class.
-
-### Problem 4: Deutsch's Algorithm
-
-The algorithm correctly classified all four oracles using a single oracle query across 1024 simulation shots with zero errors. Constant functions (f₀, f₃) consistently measured `0`, and balanced functions (f₁, f₂) consistently measured `1`, exactly matching theoretical predictions. The result was deterministic — not probabilistic — confirming that quantum interference fully resolves the classification without any guesswork.
-
-### Problem 5: Deutsch–Jozsa Algorithm
-
-The 5-qubit circuit correctly classified both constant functions and two structurally different balanced functions (first-half and alternating) using a single oracle call in each case. For both constant functions, all 1024 shots collapsed to `0000`. For both balanced functions, `0000` was entirely absent from the results. The classification was unambiguous in every test, demonstrating the exponential query advantage — 1 query versus the 9 required classically — holds regardless of how the balanced function distributes its outputs.
-
-### Overall
-
-The five problems together form a complete arc from classical baseline to quantum advantage. Classical algorithms are limited by the 2^(n-1) + 1 query bound; Deutsch–Jozsa achieves the same certainty in exactly one oracle call at any scale. All implementations were verified on Qiskit's AerSimulator with no failures across any test case. Full circuit diagrams, measurement histograms, and complexity analysis are available in [problems.ipynb](problems.ipynb).
+Key dependencies include [Qiskit](https://www.ibm.com/quantum/qiskit) and [qiskit-aer](https://github.com/Qiskit/qiskit-aer) for quantum simulation, [NumPy](https://numpy.org/) for numerical operations, and [Matplotlib](https://matplotlib.org/) for circuit and histogram visualisations.
 
 ## References
 
-- [Rapid Solution of Problems by Quantum Computation - Deutsch & Jozsa (1992)](https://doi.org/10.1098/rspa.1992.0167) - *Original Deutsch-Jozsa algorithm paper defining constant vs balanced classification.*
-
-- [Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer - Deutsch (1985)](https://doi.org/10.1098/rspa.1985.0070) - *Foundational paper proposing quantum computation and the single-bit problem.*
-
-- [Quantum Computing Since Democritus - Aaronson (2013)](https://www.cambridge.org/core/books/quantum-computing-since-democritus/F77C0E5B2E37A0B05BDE0835E582E41E) - *Discusses query complexity and oracle separations for Deutsch-Jozsa.*
-
-- [Quantum Complexity Theory - Bernstein & Vazirani (1997)](https://doi.org/10.1137/S0097539796300921) - *Extends Deutsch-Jozsa to prove broader quantum-classical separations.*
-
-- [Quantum Computing in the NISQ Era and Beyond - Preskill (2018)](https://doi.org/10.22331/q-2018-08-06-79) - *Contextualizes idealized algorithmic advantages against practical hardware constraints.*
-
-- [The Art of Computer Programming, Volume 2 - Knuth (1997)](https://www-cs-faculty.stanford.edu/~knuth/taocp.html) - *Covers pseudorandom number generation used in Python's `random` module.*
-
-- [Models of Computation - Savage (1998)](https://doi.org/10.1007/978-1-4612-0575-8) - *Discusses exponential blowup in truth table representations of Boolean functions.*
-
-- [Structure and Interpretation of Computer Programs - Abelson & Sussman (1996)](https://mitpress.mit.edu/9780262510875/) - *Functions as first-class objects, relevant to our callable function design.*
-
-- [Discrete Mathematics and Its Applications - Rosen (2019)](https://www.mheducation.com/highered/product/discrete-mathematics-applications-rosen/M9781259676512.html) - *Boolean algebra foundations and combinatorial basis for balanced function counting.*
-
-- [Quantum Computing for the Very Curious - Matuschak & Nielsen (2019)](https://quantum.country/qcvc) - *Interactive essay on quantum superposition and interference.*
-
-- [Quantum Algorithm Implementations for Beginners - Coles et al. (2022)](https://doi.org/10.1145/3517340) - *Practical Deutsch-Jozsa implementation with code examples. [arXiv:1804.03719](https://arxiv.org/abs/1804.03719).*
+- [Deutsch & Jozsa (1992) - Rapid Solution of Problems by Quantum Computation](https://doi.org/10.1098/rspa.1992.0167)
+- [Deutsch (1985) - Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer](https://doi.org/10.1098/rspa.1985.0070)
+- [Bernstein & Vazirani (1997) - Quantum Complexity Theory](https://doi.org/10.1137/S0097539796300921)
+- [Preskill (2018) - Quantum Computing in the NISQ Era and Beyond](https://doi.org/10.22331/q-2018-08-06-79)
+- [Coles et al. (2022) - Quantum Algorithm Implementations for Beginners](https://doi.org/10.1145/3517340)
+- [Matuschak & Nielsen (2019) - Quantum Computing for the Very Curious](https://quantum.country/qcvc)
+- [Aaronson (2013) - Quantum Computing Since Democritus](https://www.cambridge.org/core/books/quantum-computing-since-democritus/F77C0E5B2E37A0B05BDE0835E582E41E)
 
 - [Python random Module Documentation](https://docs.python.org/3/library/random.html) - *Reference for `random.sample()` used in balanced function generation.*
 
