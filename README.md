@@ -88,53 +88,53 @@ Key dependencies include [Qiskit](https://www.ibm.com/quantum/qiskit) and [qiski
 - [Matuschak & Nielsen (2019) - Quantum Computing for the Very Curious](https://quantum.country/qcvc)
 - [Aaronson (2013) - Quantum Computing Since Democritus](https://www.cambridge.org/core/books/quantum-computing-since-democritus/F77C0E5B2E37A0B05BDE0835E582E41E)
 
-- [Python random Module Documentation](https://docs.python.org/3/library/random.html) - *Reference for `random.sample()` used in balanced function generation.*
+- [Python random Module Documentation](https://docs.python.org/3/library/random.html) *Reference for `random.sample()` used in balanced function generation.*
 
-- [Python itertools.product() Documentation](https://docs.python.org/3/library/itertools.html#itertools.product) - *Reference for generating Cartesian products of input iterables.*
+- [Python itertools.product() Documentation](https://docs.python.org/3/library/itertools.html#itertools.product) *Reference for generating Cartesian products of input iterables.*
 
-- [Python secrets Module Documentation](https://docs.python.org/3/library/secrets.html) - *Cryptographically secure alternative to `random` for formal analysis.*
+- [Python secrets Module Documentation](https://docs.python.org/3/library/secrets.html) *Cryptographically secure alternative to `random` for formal analysis.*
 
-- [Quantum Algorithms Revisited - Cleve, Ekert, Macchiavello & Mosca (1998)](https://doi.org/10.1098/rspa.1998.0164) - *Clearest explanation of why classical computation requires exponentially many queries. [arXiv:quant-ph/9708016](https://arxiv.org/abs/quant-ph/9708016).*
+- [Quantum Algorithms Revisited - Cleve, Ekert, Macchiavello & Mosca (1998)](https://doi.org/10.1098/rspa.1998.0164) *Clearest explanation of why classical computation requires exponentially many queries. [arXiv:quant-ph/9708016](https://arxiv.org/abs/quant-ph/9708016).*
 
-- [Quantum Computation and Quantum Information - Nielsen & Chuang (2010)](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6802309D06B22D27D) - *Complete proof of the 2^(n-1) + 1 classical query requirement.*
+- [Quantum Computation and Quantum Information - Nielsen & Chuang (2010)](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6802309D06B22D27D) *Complete proof of the 2^(n-1) + 1 classical query requirement.*
 
-- [Quantum Lower Bounds by Polynomials - Beals, Buhrman, Cleve, Mosca & de Wolf (2001)](https://doi.org/10.1145/502090.502097) - *Formal framework establishing tight query bounds for Deutsch-Jozsa.*
+- [Quantum Lower Bounds by Polynomials - Beals, Buhrman, Cleve, Mosca & de Wolf (2001)](https://doi.org/10.1145/502090.502097) *Formal framework establishing tight query bounds for Deutsch-Jozsa.*
 
-- [Quantum Algorithms: An Overview - Montanaro (2016)](https://doi.org/10.1038/npjqi.2015.23) - *Survey categorizing quantum algorithms by speedup type.*
+- [Quantum Algorithms: An Overview - Montanaro (2016)](https://doi.org/10.1038/npjqi.2015.23) *Survey categorizing quantum algorithms by speedup type.*
 
-- [Quantum Computing Lecture Notes - de Wolf (2019)](https://homepages.cwi.nl/~rdewolf/qcnotes.pdf) - *Proves the classical query complexity lower bound from information theory.*
+- [Quantum Computing Lecture Notes - de Wolf (2019)](https://homepages.cwi.nl/~rdewolf/qcnotes.pdf) *Proves the classical query complexity lower bound from information theory.*
 
-- [Computational Complexity: A Modern Approach - Arora & Barak (2009)](https://theory.cs.princeton.edu/complexity/) - *Covers query complexity and oracle models formally.*
+- [Computational Complexity: A Modern Approach - Arora & Barak (2009)](https://theory.cs.princeton.edu/complexity/) *Covers query complexity and oracle models formally.*
 
-- [Introduction to the Theory of Computation - Sipser (2012)](https://mitpress.mit.edu/9780262018302/) - *Oracle Turing machines and relativized computation foundations.*
+- [Introduction to the Theory of Computation - Sipser (2012)](https://mitpress.mit.edu/9780262018302/) *Oracle Turing machines and relativized computation foundations.*
 
-- [Introduction to Algorithms - Cormen, Leiserson, Rivest & Stein (2022)](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) - *Early termination optimization and computational complexity.*
+- [Introduction to Algorithms - Cormen, Leiserson, Rivest & Stein (2022)](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) *Early termination optimization and computational complexity.*
 
-- [Quantum Supremacy Using a Programmable Superconducting Processor - Arute et al. (2019)](https://doi.org/10.1038/s41586-019-1666-5) - *Practical demonstration of the classical-quantum gap.*
+- [Quantum Supremacy Using a Programmable Superconducting Processor - Arute et al. (2019)](https://doi.org/10.1038/s41586-019-1666-5) *Practical demonstration of the classical-quantum gap.*
 
-- [Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer - Shor (1997)](https://doi.org/10.1137/S0097539795293172) - *Builds on the oracle template established by Deutsch-Jozsa.*
+- [Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer - Shor (1997)](https://doi.org/10.1137/S0097539795293172) *Builds on the oracle template established by Deutsch-Jozsa.*
 
-- [A Fast Quantum Mechanical Algorithm for Database Search - Grover (1996)](https://doi.org/10.1145/237814.237866) - *Oracle-based quantum speedup achieving quadratic advantage for search.*
+- [A Fast Quantum Mechanical Algorithm for Database Search - Grover (1996)](https://doi.org/10.1145/237814.237866) *Oracle-based quantum speedup achieving quadratic advantage for search.*
 
-- [Python Sets - Real Python](https://realpython.com/python-sets/) - *Reference for tracking distinct output values during classification.*
+- [Python Sets - Real Python](https://realpython.com/python-sets/) *Reference for tracking distinct output values during classification.*
 
-- [Elementary Gates for Quantum Computation - Barenco et al. (1995)](https://doi.org/10.1103/PhysRevA.52.3457) - *Proves any quantum computation decomposes into single-qubit and CNOT gates.*
+- [Elementary Gates for Quantum Computation - Barenco et al. (1995)](https://doi.org/10.1103/PhysRevA.52.3457) *Proves any quantum computation decomposes into single-qubit and CNOT gates.*
 
-- [Logical Reversibility of Computation - Bennett (1973)](https://doi.org/10.1147/rd.176.0525) - *Proves irreversible computation can be embedded in reversible computation, foundational for oracle design.*
+- [Logical Reversibility of Computation - Bennett (1973)](https://doi.org/10.1147/rd.176.0525) *Proves irreversible computation can be embedded in reversible computation, foundational for oracle design.*
 
-- [Reversible Computing - Toffoli (1980)](https://doi.org/10.1007/3-540-10003-2_104) - *Introduces the Toffoli gate and formalizes reversible computation underpinning quantum oracles.*
+- [Reversible Computing - Toffoli (1980)](https://doi.org/10.1007/3-540-10003-2_104) *Introduces the Toffoli gate and formalizes reversible computation underpinning quantum oracles.*
 
-- [An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation - Gottesman (2010)](https://arxiv.org/abs/0904.2557) - *Error correction techniques for running oracle circuits on noisy hardware.*
+- [An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation - Gottesman (2010)](https://arxiv.org/abs/0904.2557) *Error correction techniques for running oracle circuits on noisy hardware.*
 
-- [Synthesis of Quantum Logic Circuits - Shende, Markov & Bullock (2006)](https://doi.org/10.1109/TCAD.2005.855930) - *Tight lower bounds on CNOT gates validating our oracle gate counts.*
+- [Synthesis of Quantum Logic Circuits - Shende, Markov & Bullock (2006)](https://doi.org/10.1109/TCAD.2005.855930) *Tight lower bounds on CNOT gates validating our oracle gate counts.*
 
-- [The Computational Complexity of Linear Optics - Aaronson & Arkhipov (2011)](https://doi.org/10.1145/1993636.1993682) - *Classical intractability of simulating quantum systems.*
+- [The Computational Complexity of Linear Optics - Aaronson & Arkhipov (2011)](https://doi.org/10.1145/1993636.1993682) *Classical intractability of simulating quantum systems.*
 
-- [Universality in Quantum Computation - Deutsch, Barenco & Ekert (1995)](https://doi.org/10.1098/rspa.1995.0065) - *Almost every two-qubit gate is universal, connecting to CNOT-based oracle construction.*
+- [Universality in Quantum Computation - Deutsch, Barenco & Ekert (1995)](https://doi.org/10.1098/rspa.1995.0065) *Almost every two-qubit gate is universal, connecting to CNOT-based oracle construction.*
 
-- [Qiskit QuantumCircuit API Documentation](https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit) - *Official reference for building quantum circuits in Qiskit.*
+- [Qiskit QuantumCircuit API Documentation](https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit) *Official reference for building quantum circuits in Qiskit.*
 
-- [Qiskit Aer Simulator Documentation](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html) - *Reference for verifying oracle correctness via simulation.*
+- [Qiskit Aer Simulator Documentation](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html) *Reference for verifying oracle correctness via simulation.*
 
 ## AI Usage Declaration
 
