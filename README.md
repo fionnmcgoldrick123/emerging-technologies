@@ -138,35 +138,30 @@ Key dependencies include [Qiskit](https://www.ibm.com/quantum/qiskit) and [qiski
 
 ## AI Usage Declaration
 
-
 Artificial intelligence tools were used in a limited and supportive capacity during the preparation of this work. The following model types were used:
 
 - **ChatGPT (OpenAI GPT-4)**: Used for improving clarity of expression, correcting grammar, and refining written English.
 - **Claude (Anthropic Claude 2/3)**: Used for troubleshooting Python issues, providing extra explanation, and assisting with test case creation.
 
-[ChatGPT](https://chatgpt.com/) was occasionally used to assist with improving clarity of expression, correcting grammar, and refining written English. All ideas, analysis, structure, and final content remain my own.
+### Workflow
 
-All ideas, analysis, structure, and final content remain my own.
+**ChatGPT Workflow:** I would write my own paragraphs and sentences using my own knowledge and understanding of the material. When sections felt unclear or awkwardly phrased, I would paste them into ChatGPT and ask for help restructuring the sentences, improving grammar, or making the writing more concise. I never asked ChatGPT to generate new ideas or content, only to refine what I had already written. After receiving ChatGPT's suggestions, I would continue to edit the response further, adjusting it to include additional details I felt were important, reorganizing phrases to better match my intended meaning, or removing anything that didn't align with my original intent.
 
-**ChatGPT Example Prompt**
+**Claude Workflow:** I consulted Claude in specific instances to help troubleshoot Python-related issues when alternative sources such as documentation or online forums did not resolve the problem. When Claude provided code suggestions or explanations, I carefully reviewed, understood, and tested them before inclusion in my work. I also used Claude to deepen my understanding of Python concepts and to generate test cases, which I then validated and refined. Any contributions were adapted to fit my specific implementation and verified to work correctly.
+
+### Prompt Examples
+
+**ChatGPT Example**
 
 **Me:**
 
-*Before we can really appreciate what makes the Deutsch Jozsa algorithm so remarkable, we first needs to understand what kind of problem it is actually solving.*
-
-*At the centre of it is the Boolean function, which is a mathematical function that take one or more True or False inputs and return a single True or False output. These kind of functions are the building blocks for digital logic and computer circuits. A simple one input Boolean function might always return True no matter what you give it, or it might flip its input and returns False when given True and vice versa.*
+*The reason why Deutsch-Jozsa is important is because you can basically check if a function is constant or balanced way faster using quantum instead of classical computers. Like with a 4-input function you need to test it up to 9 times worst case scenario with a classical approach, but quantum only needs 1 query which is pretty insane*
 
 **ChatGPT:**
 
-*Before we can appreciate what makes the Deutsch-Jozsa algorithm remarkable, we need to understand the kind of problem it's actually solving.*
+*The Deutsch-Jozsa algorithm demonstrates a significant quantum advantage for determining function properties. Classically, testing whether a four-input Boolean function is constant or balanced requires up to nine oracle queries in the worst case. Quantumly, this same task can be accomplished with just a single query—an exponential speedup that scales dramatically with the number of input variables.*
 
-*At the heart of it all is the [Boolean function](https://en.wikipedia.org/wiki/Boolean_function), a mathematical function that takes one or more ``True``/``False`` inputs and returns a single ``True``/``False`` output. These functions are the building blocks of digital logic and computer circuits. A simple one-input Boolean function might always return ``True`` no matter what you give it, or it might flip its input, returning ``False`` when given `````True````` and vice versa:*
-
-[Claude](https://claude.ai/new) was consulted in specific instances to help troubleshoot Python related issues when alternative sources such as documentation or online forums did not resolve the problem. Any code produced was carefully reviewed, understood, and adapted where necessary before inclusion. Claude was also used for extra explanation for Python concepts when needed.
-
-Claude was also used in the assistance of creating test cases for problem implementations in the notebook. 
-
-**Claude Example Prompt**
+**Claude Example**
 
 **Me:**
 
@@ -174,7 +169,7 @@ Claude was also used in the assistance of creating test cases for problem implem
 
 *Can you explain why using a dictionary for the lookup table guarantees that the function is truly balanced when eight inputs are selected?*
 
-**Claude**
+**Claude:**
 
 *Using a dictionary as a lookup table guarantees correctness because every possible input combination is explicitly mapped to exactly one output value.*
 
@@ -214,7 +209,7 @@ lookup_table[input_combo] = input_combo in true_inputs
 
 *The dictionary enforces determinism as well. Once created, every identical input tuple will always return the same output value, which ensures the function behaves consistently like a proper Boolean function.*
 
-While artificial intelligence was used as a helpful tool in the production of my notebook, all work remains reflects my own understanding, research, and ideas.
+While artificial intelligence was used as a helpful tool in the production of my notebook, all work remains my own and reflects my understanding, research, and ideas.
 
 ## Author
 *This notebook was written and designed by Fionn McGoldrick*
