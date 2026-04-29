@@ -44,7 +44,7 @@ Extends the approach to four-input functions from Problem 1. The Deutsch-Jozsa a
 
 ### Installation
 
-Clone the repository and install dependencies:
+Clone the repository and create a virtual environment:
 
 ```bash
 git clone https://github.com/fionnmcgoldrick123/emerging-technologies.git
