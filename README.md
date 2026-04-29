@@ -140,14 +140,14 @@ Key dependencies include [Qiskit](https://www.ibm.com/quantum/qiskit) and [qiski
 
 Artificial intelligence tools were used in a limited and supportive capacity during the preparation of this work. The following model types were used:
 
-- **ChatGPT (OpenAI GPT-4)**: Used for improving clarity of expression, correcting grammar, and refining written English.
-- **Claude (Anthropic Claude 2/3)**: Used for troubleshooting Python issues, providing extra explanation, and assisting with test case creation.
+- **ChatGPT (OpenAI GPT-4o)**: Used for improving clarity of expression, correcting grammar, and refining written English.
+- **GitHub Copilot (Anthropic Claude Sonnet 4.6)**: Used for troubleshooting Python issues, providing extra explanation, and assisting with test case creation.
 
 ### Workflow
 
 **ChatGPT Workflow:** I would write my own paragraphs and sentences using my own knowledge and understanding of the material. When sections felt unclear or awkwardly phrased, I would paste them into ChatGPT and ask for help restructuring the sentences, improving grammar, or making the writing more concise. I never asked ChatGPT to generate new ideas or content, only to refine what I had already written. After receiving ChatGPT's suggestions, I would continue to edit the response further, adjusting it to include additional details I felt were important, reorganizing phrases to better match my intended meaning, or removing anything that didn't align with my original intent.
 
-**Claude Workflow:** I consulted Claude in specific instances to help troubleshoot Python-related issues when alternative sources such as documentation or online forums did not resolve the problem. When Claude provided code suggestions or explanations, I carefully reviewed, understood, and tested them before inclusion in my work. I also used Claude to deepen my understanding of Python concepts and to generate test cases, which I then validated and refined. Any contributions were adapted to fit my specific implementation and verified to work correctly.
+**GitHub Copilot Workflow:** I consulted GitHub Copilot (powered by Anthropic Claude Sonnet 4.6) in specific instances to help troubleshoot Python-related issues when alternative sources such as documentation or online forums did not resolve the problem. When Copilot provided code suggestions or explanations, I carefully reviewed, understood, and tested them before inclusion in my work. I also used Copilot to deepen my understanding of Python concepts and to generate test cases, which I then validated and refined. Any contributions were adapted to fit my specific implementation and verified to work correctly.
 
 ### Prompt Examples
 
@@ -161,7 +161,7 @@ Artificial intelligence tools were used in a limited and supportive capacity dur
 
 *The Deutsch-Jozsa algorithm demonstrates a significant quantum advantage for determining function properties. Classically, testing whether a four-input Boolean function is constant or balanced requires up to nine oracle queries in the worst case. Quantumly, this same task can be accomplished with just a single query—an exponential speedup that scales dramatically with the number of input variables.*
 
-**Claude Example**
+**GitHub Copilot Example**
 
 **Me:**
 
@@ -169,7 +169,7 @@ Artificial intelligence tools were used in a limited and supportive capacity dur
 
 *Can you explain why using a dictionary for the lookup table guarantees that the function is truly balanced when eight inputs are selected?*
 
-**Claude:**
+**GitHub Copilot:**
 
 *Using a dictionary as a lookup table guarantees correctness because every possible input combination is explicitly mapped to exactly one output value.*
 
