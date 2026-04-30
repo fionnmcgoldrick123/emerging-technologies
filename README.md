@@ -13,7 +13,8 @@ emerging-technologies/
 ├── problems.ipynb      # Main notebook containing all five problems
 ├── README.md           # This file
 ├── requirements.txt    # Python package dependencies
-└── .gitignore          # Git ignore rules
+├── .gitignore          # Git ignore rules
+└── img/                # Circuit diagrams saved during notebook execution
 ```
 
 ## Problems

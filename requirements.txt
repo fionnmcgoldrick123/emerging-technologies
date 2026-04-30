@@ -9,12 +9,9 @@ qiskit-aer==0.17.2
 
 # Data science and visualization
 numpy==2.4.1
+# used for summary table display in Problem 4 only
 pandas==3.0.0
 matplotlib==3.10.8
 
 # Scientific computing
 scipy==1.17.0
-sympy==1.14.0
-
-# Supporting dependencies
-python-dateutil==2.9.0.post0
