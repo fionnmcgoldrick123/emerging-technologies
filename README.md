@@ -160,7 +160,7 @@ Artificial intelligence tools were used in a limited and supportive capacity dur
 
 **ChatGPT:**
 
-*The Deutsch-Jozsa algorithm demonstrates a significant quantum advantage for determining function properties. Classically, testing whether a four-input Boolean function is constant or balanced requires up to nine oracle queries in the worst case. Quantumly, this same task can be accomplished with just a single query—an exponential speedup that scales dramatically with the number of input variables.*
+*The Deutsch-Jozsa algorithm demonstrates a significant quantum advantage for determining function properties. Classically, testing whether a four-input Boolean function is constant or balanced requires up to nine oracle queries in the worst case. Quantumly, this same task can be accomplished with just a single query, an exponential speedup that scales dramatically with the number of input variables.*
 
 **GitHub Copilot Example**
 
